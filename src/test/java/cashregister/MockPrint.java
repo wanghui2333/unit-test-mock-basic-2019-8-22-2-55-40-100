@@ -20,4 +20,8 @@ public class MockPrint extends Printer{
     public String getTempString() {
         return tempString;
     }
+
+    public void clear(){
+        tempString = null;
+    }
 }
