@@ -5,6 +5,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -28,8 +31,13 @@ public class CashRegisterTest {
     @Disabled
     public void should_print_the_real_purchase_when_call_process() {
         //given
+        Printer printer  = Mockito.mock(Printer.class);
+        Purchase purchase = Mockito.mock(Purchase.class);
+
+        cashRegister.process(purchase);
         //when
         //then
+        assertEquals("test product\t1.0\n", mockPrint.getTempString());
     }
 
     @Test

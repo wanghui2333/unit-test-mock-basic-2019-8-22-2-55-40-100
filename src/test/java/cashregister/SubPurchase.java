@@ -7,7 +7,7 @@ package cashregister;
  * @Email : wanghui16@zybank.com.cn
  * @Date : 2019-08-26 17:29
  */
-public class SubPurchase extends Purchase{
+public class SubPurchase extends Purchase {
     public SubPurchase() {
         super(new Item[0]);
     }
